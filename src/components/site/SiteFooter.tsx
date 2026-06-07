@@ -1,14 +1,18 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail, MapPin } from "lucide-react";
-import { CONTACT, COMPANY, Logo, SERVICES } from "./shared";
+import { CONTACT, COMPANY, SERVICES, IMG } from "./shared";
 
 export function SiteFooter() {
   return (
     <footer className="bg-navy text-white">
       <div className="px-6 md:px-16 py-14 grid md:grid-cols-4 gap-10">
-        <div className="overflow-hidden">
-          <div className="bg-white inline-flex p-2 rounded max-w-full">
-            <Logo className="max-w-full" />
+        <div>
+          <div className="bg-white inline-flex items-center gap-2 p-2 rounded">
+            <img src={IMG.logo} alt="Zayed Amer logo" className="h-10 w-10 object-contain shrink-0" />
+            <div className="leading-tight">
+              <div className="font-display font-extrabold text-navy text-base tracking-wide">ZAYED AMER</div>
+              <div className="text-[9px] uppercase tracking-[0.15em] text-navy font-semibold">Contracting Establishment</div>
+            </div>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             Delivering comprehensive contracting services across civil construction, equipment rental, manpower and material supply in Saudi Arabia.

@@ -4,8 +4,8 @@ import { toast } from "sonner";
 type Variant = "contact" | "career";
 
 const WEB3FORMS_KEYS: Record<Variant, string> = {
-  contact: "c0be8f3a-3ad9-4b04-a5cd-a009a360c751",
-  career: "26ee992b-d7b4-40d4-b329-95c2ee45ed12",
+  contact: "c4bc118a-0ca4-4228-8e8b-adf4d30b7ac3",
+  career: "b8eaf300-c42d-4d58-b597-211fedf9b1bf",
 };
 
 const FORM_ENDPOINTS: Record<Variant, string> = {

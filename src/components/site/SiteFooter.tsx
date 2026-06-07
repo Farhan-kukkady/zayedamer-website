@@ -6,9 +6,9 @@ export function SiteFooter() {
   return (
     <footer className="bg-navy text-white">
       <div className="px-6 md:px-16 py-14 grid md:grid-cols-4 gap-10">
-        <div>
-          <div className="bg-white inline-block p-2 rounded">
-            <Logo />
+        <div className="overflow-hidden">
+          <div className="bg-white inline-flex p-2 rounded max-w-full">
+            <Logo className="max-w-full" />
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             Delivering comprehensive contracting services across civil construction, equipment rental, manpower and material supply in Saudi Arabia.

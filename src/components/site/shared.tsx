@@ -106,7 +106,13 @@ export const CONTACT = {
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <img src={IMG.logo} alt="Zayed Amer logo" className="h-12 w-12 object-contain shrink-0" />
+      <div className="h-14 w-14 overflow-hidden shrink-0 flex items-center justify-center">
+        <img 
+          src={IMG.logo} 
+          alt="Zayed Amer logo" 
+          className="w-full h-full object-cover object-top scale-125 origin-top" 
+        />
+      </div>
       <div className="leading-tight">
         <div className="font-display font-extrabold text-navy text-xl md:text-2xl tracking-wide">ZAYED AMER</div>
         <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-navy font-semibold mt-0.5 whitespace-nowrap">Contracting Establishment</div>

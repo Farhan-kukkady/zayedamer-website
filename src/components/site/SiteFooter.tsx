@@ -8,7 +8,13 @@ export function SiteFooter() {
       <div className="px-6 md:px-16 py-14 grid md:grid-cols-4 gap-10">
         <div>
           <div className="bg-white inline-flex items-center gap-2 p-2 rounded">
-            <img src={IMG.logo} alt="Zayed Amer logo" className="h-10 w-10 object-contain shrink-0" />
+            <div className="h-12 w-12 overflow-hidden shrink-0 flex items-center justify-center">
+              <img 
+                src={IMG.logo} 
+                alt="Zayed Amer logo" 
+                className="w-full h-full object-cover object-top scale-125 origin-top" 
+              />
+            </div>
             <div className="leading-tight">
               <div className="font-display font-extrabold text-navy text-base tracking-wide">ZAYED AMER</div>
               <div className="text-[9px] uppercase tracking-[0.15em] text-navy font-semibold">Contracting Establishment</div>

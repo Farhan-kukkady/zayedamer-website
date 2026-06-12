@@ -1,6 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { CONTACT, COMPANY, SERVICES, IMG } from "./shared";
+
+function WhatsAppIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M20.52 3.48A11.78 11.78 0 0 0 12.04 0C5.5 0 .2 5.3.2 11.84a11.7 11.7 0 0 0 1.6 5.92L0 24l6.4-1.68a11.83 11.83 0 0 0 5.64 1.44h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.13-3.37-8.44ZM12.05 21.6h-.01a9.74 9.74 0 0 1-4.96-1.36l-.36-.21-3.8 1 1.01-3.71-.23-.38a9.73 9.73 0 0 1-1.5-5.1c0-5.39 4.39-9.78 9.79-9.78a9.73 9.73 0 0 1 9.78 9.79c0 5.4-4.39 9.75-9.79 9.75Zm5.36-7.3c-.3-.15-1.74-.86-2-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.65-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.91-2.18-.24-.58-.49-.5-.66-.5l-.57-.01c-.2 0-.53.07-.8.37s-1.06 1.03-1.06 2.52 1.08 2.92 1.23 3.12c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.74-.71 1.99-1.4.25-.7.25-1.28.17-1.4-.08-.13-.27-.2-.57-.35Z"/>
+    </svg>
+  );
+}
 
 export function SiteFooter() {
   return (
@@ -24,10 +32,9 @@ export function SiteFooter() {
             Delivering comprehensive contracting services across civil construction, equipment rental, manpower and material supply in Saudi Arabia.
           </p>
           <div className="flex gap-3 mt-5">
-            <a href={CONTACT.social.facebook} aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 hover:bg-orange flex items-center justify-center"><Facebook className="w-4 h-4" /></a>
-            <a href={CONTACT.social.twitter} aria-label="Twitter" className="w-9 h-9 rounded-full bg-white/10 hover:bg-orange flex items-center justify-center"><Twitter className="w-4 h-4" /></a>
-            <a href={CONTACT.social.linkedin} aria-label="LinkedIn" className="w-9 h-9 rounded-full bg-white/10 hover:bg-orange flex items-center justify-center"><Linkedin className="w-4 h-4" /></a>
-            <a href={CONTACT.social.instagram} aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/10 hover:bg-orange flex items-center justify-center"><Instagram className="w-4 h-4" /></a>
+            <a href={CONTACT.social.whatsapp} aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-white/10 hover:bg-orange flex items-center justify-center">
+              <WhatsAppIcon className="w-4 h-4" />
+            </a>
           </div>
         </div>
 

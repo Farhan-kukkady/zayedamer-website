@@ -43,28 +43,28 @@ export function SiteHeader() {
       </div>
 
       {/* Main bar */}
-      <div className="flex items-stretch justify-between px-4 md:px-10">
-        <Link to="/" className="flex items-center py-3">
+      <div className="flex items-center justify-between px-4 md:px-10 py-3">
+        <Link to="/" className="flex items-center">
           <Logo />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm xl:text-[15px]">
           {NAV.slice(0, 2).map((n) => (
-            <Link key={n.to} to={n.to} className="text-navy font-semibold hover:text-orange transition-colors" activeOptions={{ exact: true }} activeProps={{ className: "text-orange" }}>
+            <Link key={n.to} to={n.to} className="text-navy font-semibold hover:text-orange transition-colors whitespace-nowrap" activeOptions={{ exact: true }} activeProps={{ className: "text-orange" }}>
               {n.label}
             </Link>
           ))}
 
           {/* Services dropdown */}
           <div className="relative group">
-            <button className="text-navy font-semibold hover:text-orange transition-colors flex items-center gap-1">
+            <button className="text-navy font-semibold hover:text-orange transition-colors flex items-center gap-1 whitespace-nowrap">
               Services <ChevronDown className="w-4 h-4" />
             </button>
             <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all min-w-[240px]">
               <div className="bg-navy text-white shadow-xl">
                 {SERVICES.map((s) => (
-                  <Link key={s.to} to={s.to} className="block px-6 py-3 border-b border-white/10 hover:text-orange font-semibold text-sm" activeProps={{ className: "text-orange" }}>
+                  <Link key={s.to} to={s.to} className="block px-6 py-3 border-b border-white/10 hover:text-orange font-semibold text-sm whitespace-nowrap" activeProps={{ className: "text-orange" }}>
                     {s.label}
                   </Link>
                 ))}
@@ -73,20 +73,20 @@ export function SiteHeader() {
           </div>
 
           {NAV.slice(2).map((n) => (
-            <Link key={n.to} to={n.to} className="text-navy font-semibold hover:text-orange transition-colors" activeProps={{ className: "text-orange" }}>
+            <Link key={n.to} to={n.to} className="text-navy font-semibold hover:text-orange transition-colors whitespace-nowrap" activeProps={{ className: "text-orange" }}>
               {n.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-stretch gap-4">
+        <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center">
               <Phone className="w-5 h-5 text-orange" />
             </div>
             <a href={CONTACT.phoneHref} className="text-navy font-bold whitespace-nowrap hover:text-orange">{CONTACT.phone}</a>
           </div>
-          <Link to="/contact" className="hidden md:flex items-center px-6 bg-navy text-white font-bold tracking-wider hover:bg-orange transition-colors">
+          <Link to="/contact" className="hidden md:flex items-center h-12 px-6 bg-navy text-white font-bold tracking-wider hover:bg-orange transition-colors whitespace-nowrap">
             GET A QUOTE
           </Link>
           <button className="lg:hidden p-2 text-navy" onClick={() => setOpen(!open)} aria-label="Menu">

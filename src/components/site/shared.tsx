@@ -105,7 +105,7 @@ export const CONTACT = {
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-3 pr-6 lg:pr-8 ${className}`}>
       <div className="h-14 w-14 overflow-hidden shrink-0 flex items-center justify-center">
         <img 
           src={IMG.logo} 

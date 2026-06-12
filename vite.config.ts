@@ -7,11 +7,11 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [
     tsconfigPaths({ projects: ["./tsconfig.json"] }),
-    react(),
-    tailwindcss(),
     tanstackStart({
       server: { entry: "server" },
     }),
+    react(),
+    tailwindcss(),
   ],
   resolve: {
     alias: {

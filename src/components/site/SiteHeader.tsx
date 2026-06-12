@@ -29,10 +29,6 @@ export function SiteHeader() {
       <div className="border-b border-gray-200">
         <div className="flex items-center justify-between px-4 md:px-10 py-2 text-sm">
           <div className="flex items-center gap-3 text-navy">
-            <a href={CONTACT.social.facebook} aria-label="Facebook" className="hover:text-orange"><Facebook className="w-4 h-4" /></a>
-            <a href={CONTACT.social.twitter} aria-label="Twitter" className="hover:text-orange"><Twitter className="w-4 h-4" /></a>
-            <a href={CONTACT.social.linkedin} aria-label="LinkedIn" className="hover:text-orange"><Linkedin className="w-4 h-4" /></a>
-            <a href={CONTACT.social.instagram} aria-label="Instagram" className="hover:text-orange"><Instagram className="w-4 h-4" /></a>
             <a href={CONTACT.social.whatsapp} aria-label="WhatsApp" className="hover:text-orange"><WhatsAppIcon className="w-4 h-4" /></a>
           </div>
           <div className="hidden md:flex items-center gap-2 text-navy">
